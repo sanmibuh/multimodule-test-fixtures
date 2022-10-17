@@ -1,15 +1,19 @@
 package org.sanmibuh.module.domain;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 class MyDomainTest {
 
   @Test
   void should_domain_run() {
-    final var name = "ANY";
+    final var domainName = "ANY domain";
+    final var projectionName = "ANY projection";
 
-    final var myProjection = new MyDomain(name);
+    final var myDomain = MyDomainMother.withName(domainName, projectionName);
 
-    assert myProjection.getName().equals(name);
+    assertEquals(domainName, myDomain.getName());
+    assertEquals(projectionName, myDomain.getMyProjection().getName());
   }
 }
