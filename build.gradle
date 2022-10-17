@@ -1,0 +1,16 @@
+subprojects {
+  apply plugin: 'java-library'
+  apply plugin: 'jvm-test-suite'
+
+  repositories {
+    mavenCentral()
+  }
+
+  testing {
+    suites {
+      test {
+        useJUnitJupiter('5.8.1')
+      }
+    }
+  }
+}
