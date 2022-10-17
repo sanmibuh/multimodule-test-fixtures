@@ -1,0 +1,10 @@
+rootProject.name = 'multimodule-test-fixtures'
+include(
+    'module-domain',
+    'module-projection',
+    'module-infrastructure',
+    'infrastructure'
+)
+project(':module-domain').projectDir = file('module/domain')
+project(':module-projection').projectDir = file('module/projection')
+project(':module-infrastructure').projectDir = file('module/infrastructure')
