@@ -17,7 +17,7 @@ class MyInfrastructureTest {
     final var myProjection = new MyProjection(projectionName);
     final var myDomain = new MyDomain(myProjection, domainName);
 
-    final var myInfrastructure = new MyInfrastructure(myDomain, myProjection, name);
+    final var myInfrastructure = MyInfrastructureMother.withName(name, domainName, projectionName);
 
     assertEquals(name, myInfrastructure.getName());
     assertEquals(domainName, myInfrastructure.getMyDomain().getName());
