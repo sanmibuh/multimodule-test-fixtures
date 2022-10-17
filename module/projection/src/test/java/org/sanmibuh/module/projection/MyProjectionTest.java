@@ -10,7 +10,7 @@ class MyProjectionTest {
   void should_projection_run() {
     final var name = "ANY";
 
-    final var myProjection = new MyProjection(name);
+    final var myProjection = MyProjectionMother.withName(name);
 
     assertEquals(name, myProjection.getName());
   }
