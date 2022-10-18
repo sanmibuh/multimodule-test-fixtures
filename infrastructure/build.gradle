@@ -5,3 +5,9 @@ plugins {
 application {
   mainClass = 'multimodule.test.fixtures.app.App'
 }
+
+dependencies {
+  implementation project(':module-domain')
+  implementation project(':module-projection')
+  implementation project(':module-infrastructure')
+}

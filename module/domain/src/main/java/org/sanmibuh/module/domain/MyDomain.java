@@ -19,4 +19,12 @@ public class MyDomain {
   public MyProjection getMyProjection() {
     return myProjection;
   }
+
+  @Override
+  public String toString() {
+    return "MyDomain{" +
+        "myProjection=" + myProjection +
+        ", name='" + name + '\'' +
+        '}';
+  }
 }

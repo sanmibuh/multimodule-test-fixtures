@@ -11,4 +11,11 @@ public class MyProjection {
   public String getName() {
     return name;
   }
+
+  @Override
+  public String toString() {
+    return "MyProjection{" +
+        "name='" + name + '\'' +
+        '}';
+  }
 }

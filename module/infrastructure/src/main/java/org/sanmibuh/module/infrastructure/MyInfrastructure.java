@@ -26,4 +26,13 @@ public class MyInfrastructure {
   public MyProjection getMyProjection() {
     return myProjection;
   }
+
+  @Override
+  public String toString() {
+    return "MyInfrastructure{" +
+        "myDomain=" + myDomain +
+        ", myProjection=" + myProjection +
+        ", name='" + name + '\'' +
+        '}';
+  }
 }
