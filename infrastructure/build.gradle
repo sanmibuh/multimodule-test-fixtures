@@ -1,14 +1,45 @@
-plugins {
-  id 'application'
-}
-
-application {
-  mainClass = 'multimodule.test.fixtures.app.App'
-}
-
 lookiero {
   testFixtures = true
+  springboot {
+/*
+    contracts {
+      enabled = true
+    }
+  */
+    enabled = false
+    //profiles = profile
+    /*
+    rdbm {
+      postgreSQL = true
+    }
+    stream {
+      rabbitMQ = true
+    }
+    liquibase {
+      enabled = true
+      physicalStrategy = 'physical-strategy'
+      implicitStrategy = 'implicit-strategy'
+      datasourceURL = 'url'
+      datasourceUsername = 'username'
+      datasourcePassword = 'password'
+      excludeObjects = 'table:qrtz_.*'
+      classpath = "${project.rootDir}/path"
+    }
+
+     */
+    tkiero {
+      enabled = false
+      testIsolation {
+        ciPath = "${project.projectDir}/src/e2eTest/resources/docker/ci"
+        environment = [
+            PROFILE    : 'profile',
+            APP_VERSION: version
+        ]
+      }
+    }
+  }
 }
+
 
 configurations {
   testFixturesImplementation
