@@ -1,6 +1,7 @@
 subprojects {
   apply plugin: 'java-library'
   apply plugin: 'jvm-test-suite'
+  apply plugin: 'java-test-fixtures'
 
   repositories {
     mavenCentral()
