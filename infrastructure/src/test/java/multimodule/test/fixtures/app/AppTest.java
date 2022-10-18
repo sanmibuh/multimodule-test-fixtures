@@ -10,12 +10,13 @@ class AppTest {
   void should_app() {
     final var app = new App();
 
-    final var myInfra = "INfra";
-    assertEquals(myInfra, app.getMyInfrastructure().getName());
+    final var expectedIfra = AppFixtures.infra();
+
+    assertEquals(expectedIfra.getName(), app.getMyInfrastructure().getName());
     final var myDomain = "Domain";
-    assertEquals(myDomain, app.getMyInfrastructure().getMyDomain().getName());
+    assertEquals(expectedIfra.getMyDomain().getName(), app.getMyInfrastructure().getMyDomain().getName());
     final var myProjection = "Proj2";
-    assertEquals(myProjection, app.getMyInfrastructure().getMyProjection().getName());
+    assertEquals(expectedIfra.getMyProjection().getName(), app.getMyInfrastructure().getMyProjection().getName());
   }
 
 }

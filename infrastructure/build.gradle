@@ -1,5 +1,6 @@
 plugins {
   id 'application'
+  id 'java-test-fixtures'
 }
 
 application {
@@ -10,4 +11,6 @@ dependencies {
   implementation project(':module-domain')
   implementation project(':module-projection')
   implementation project(':module-infrastructure')
+
+  testFixturesImplementation(testFixtures(project(':module-infrastructure')))
 }
