@@ -6,6 +6,14 @@ application {
   mainClass = 'multimodule.test.fixtures.app.App'
 }
 
+lookiero {
+  testFixtures = true
+}
+
+configurations {
+  testFixturesImplementation
+}
+
 dependencies {
   implementation project(':module-domain')
   implementation project(':module-projection')

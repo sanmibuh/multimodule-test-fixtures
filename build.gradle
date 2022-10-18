@@ -1,17 +1,11 @@
+plugins {
+  id 'com.lookiero'
+}
+
 subprojects {
-  apply plugin: 'java-library'
-  apply plugin: 'jvm-test-suite'
-  apply plugin: 'java-test-fixtures'
 
-  repositories {
-    mavenCentral()
-  }
-
-  testing {
-    suites {
-      test {
-        useJUnitJupiter('5.8.1')
-      }
-    }
+  sourceCompatibility = '17'
+  lookiero {
+    packageBase = 'com.lookiero.platform.playground'
   }
 }

@@ -1,3 +1,11 @@
+lookiero {
+  testFixtures = true
+}
+
+configurations {
+  testFixturesImplementation
+}
+
 dependencies {
   implementation project(':module-projection')
   testFixturesImplementation(testFixtures(project(':module-projection')))

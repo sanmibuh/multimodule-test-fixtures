@@ -1,3 +1,21 @@
+pluginManagement {
+  repositories {
+    maven {
+      name = "Lookiero Group"
+      url "${lkRepoUrl}/group"
+      credentials {
+        username System.getenv('LOOKIERO_ARCHIVA_USER')
+        password System.getenv('LOOKIERO_ARCHIVA_PASSWORD')
+      }
+    }
+
+    gradlePluginPortal()
+  }
+  plugins {
+    id 'com.lookiero' version lookieroProjectPluginVersion
+  }
+}
+
 rootProject.name = 'multimodule-test-fixtures'
 include(
     'module-domain',
