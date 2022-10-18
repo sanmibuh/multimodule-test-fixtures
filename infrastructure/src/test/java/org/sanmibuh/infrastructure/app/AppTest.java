@@ -1,4 +1,4 @@
-package multimodule.test.fixtures.app;
+package org.sanmibuh.infrastructure.app;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,4 +1,4 @@
-package multimodule.test.fixtures.app;
+package org.sanmibuh.infrastructure.app;
 
 import org.sanmibuh.module.domain.MyDomain;
 import org.sanmibuh.module.infrastructure.MyInfrastructure;

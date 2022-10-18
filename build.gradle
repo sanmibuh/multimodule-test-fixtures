@@ -3,9 +3,12 @@ plugins {
 }
 
 subprojects {
-
   sourceCompatibility = '17'
   lookiero {
-    packageBase = 'com.lookiero.platform.playground'
+    packageBase = 'org.sanmibuh'
+    lombok = true
+    messaging = true
+    requestResponseLib = true
   }
+
 }
